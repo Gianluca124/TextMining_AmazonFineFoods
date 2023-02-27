@@ -1,17 +1,10 @@
 # Text classification and Text clustering on Amazon Fine Food Reviews dataset
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 ## Table of contents
 * [Abstract](#abstract)
 * [Report](https://www.slideshare.net/GianlucaCavallaro3/text-mining-on-amazon-fine-foods-reviews)
 * [Requirements](#requirements)
-* [COVIDx CXR-3: Dataset and Image Pre-processing](#covidx-cxr-3-dataset-and-image-pre-processing)
+* [Pre-processing](#pre-processing)
 * [AC-GAN Training and Generation](#ac-gan-training-and-generation)
 * [AC-GAN Evaluation: FID, Intra FID, Inception Score (IS), t-SNE](#ac-gan-evaluation-fid-intra-fid-inception-score-is-t-SNE)
 * [Chest X-Ray Classification: Pneumonia and COVID-19 detection with GAN augmentation](#chest-x-ray-classification-pneumonia-and-covid-19-detection-with-gan-augmentation)
@@ -25,10 +18,8 @@
 In this project, different text mining techniques are applied to the Amazon Fine Food Reviews dataset. In particular, the tasks of text classification and text clustering are addressed. The main questions that are being investigated are:
 
 1) Is it possible to classify the reviews as "good" or "bad"?
-2) 2) Is it possible to predict the score assigned to the review from the text of the review itself?
-3) 3) Is it possible to group similar reviews into the same cluster?
-
-![GenetationExample](https://github.com/giocoal/CXR-ACGAN-chest-xray-generator-covid19-pneumonia/raw/main/Report/CXR-ACGAN%20-%20Example.png)
+2) Is it possible to predict the score assigned to the review from the text of the review itself?
+3) Is it possible to group similar reviews into the same cluster?
 
 ## Requirements
 
@@ -37,19 +28,13 @@ In this project, different text mining techniques are applied to the Amazon Fine
 - ipykernel
 - matplotlib
 - pandas
-- seaborn
-- tqdm==4.64.1
+- nltk
+- gensim
 - scikit-learn==1.2.0
-- glob2==0.7
-- keras==2.10.0
-- Keras-Preprocessing==1.1.2
-- numpy==1.24.2
-- opencv_python==4.7.0.68
-- pandas==1.5.3
-- Pillow==9.4.0
-- imageio==2.25.0
+- textblob
+- yellowbrick
 
-## COVIDx CXR-3: Dataset and Image Pre-processing
+## Pre-processing
 
 ### Step 1. Download and extract the dataset
 
