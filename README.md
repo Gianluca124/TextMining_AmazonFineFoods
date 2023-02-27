@@ -5,13 +5,8 @@
 * [Report](https://www.slideshare.net/GianlucaCavallaro3/text-mining-on-amazon-fine-foods-reviews)
 * [Requirements](#requirements)
 * [Pre-processing](#pre-processing)
-* [AC-GAN Training and Generation](#ac-gan-training-and-generation)
-* [AC-GAN Evaluation: FID, Intra FID, Inception Score (IS), t-SNE](#ac-gan-evaluation-fid-intra-fid-inception-score-is-t-SNE)
-* [Chest X-Ray Classification: Pneumonia and COVID-19 detection with GAN augmentation](#chest-x-ray-classification-pneumonia-and-covid-19-detection-with-gan-augmentation)
-* [Status](#status)
-* [Contact](#contact)
-* [License](#license)
-* [Contributing](#contributing)
+* [Classification](#classification)
+* [Clustering](#clustering)
 
 ## Abstract
 
@@ -34,89 +29,33 @@ In this project, different text mining techniques are applied to the Amazon Fine
 - textblob
 - yellowbrick
 
+
 ## Pre-processing
 
 ### Step 1. Download and extract the dataset
 
-Download COVID-x CXR-3 from the [official Kaggle Folder](https://www.kaggle.com/datasets/andyczhao/covidx-cxr2?select=competition_test) and extract `train` and `test` folders in `./Data/COVIDx/`, resulting in a folder tree like this:
-
-```
-project_folder
-└───Data
-    ├───COVIDx
-    |    ├───test_COVIDx9A.txt
-    |    ├───train_COVIDx9A.txt
-    |    ├───train
-    |    └───test
-    ├───COVIDx-splitted-resized-112
-    ├─── ...
-```
+Download the dataset from the [official Kaggle Folder](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews).
 
 ### Step 2. Perform class splitting of the dataset
-Run the `./Data/train_test_class_split.sh` bash script which will subdivide the training and testing images within the COVIDx-splitted-resized-112 folder according to their class. So that we can then use `flow_from_directory`. You get a directory tree like this:
-```
-project_folder
-└───Data
-    ├───COVIDx
-    ├───COVIDx-splitted-resized-112
-    |    ├───test_COVIDx9A.txt
-    |    ├───train_COVIDx9A.txt
-    |    ├───train
-    |    |   ├───COVID-19
-    |    |   ├───normal
-    |    |   └───pneumonia
-    |    └───test
-    ├─── ...
-```
+Perform all the necessary pre-processing steps using `Preprocessing.ipynb` notebook.
 
 
-### Step 3. (Opt) Perform images resizing to 112 x 122
-This step is intended to reduce the size of the dataset. It is not essential because resizing is also performed in the training phase. Run the `./Data/resize_all.py` script.
+## Classification
 
-## AC-GAN Training and Generation
+In the `Classification.ipynb` notebook both binary and multi-class classification are performed. For both tasks several algorithm are proposed.
 
-1. Run the code and follow the detailed instructions in `AC-cGAN-training.ipynb` to perform AC-GAN training.
-2. Generates images in large quantities using `AC-cGAN-generator.ipynb`.
 
-## AC-GAN Evaluation: FID, Intra FID, Inception Score (IS), t-SNE
+## Clustering
 
-Run the code and follow the detailed instructions in `AC-cGAN-evaluate.ipynb` to:
-- Displaying training metrics (**Losses and Accuracies**)
-- Calculate **Fréchet inception distance (FID)**
-- Calculate the **Intra Fréchet inception distance (Intra FID)**
-- Calculate the **Inception Score (IS)**
-- View **t-SNE two-dimensional embeddings**
+In the `Clustering.ipynb` notebook the clustering task is proposed via K-Means clustering and Agglomerative Clustering.
 
-## Chest X-Ray Classification: Pneumonia and COVID-19 detection with GAN Augmentation
-
-Use the notebooks in `CXR Classification` folder to train and evaluate classification models for the detection of COVID-19, Pneumonia and Absence of symptoms in Chest X-ray. Some forms of data augmentation are tested, including generation by trained AC-GAN. 
 
 ## Status
 
  Project is: ![##c5f015](https://via.placeholder.com/15/c5f015/000000?text=+)  _Done_
 
 
-## Contact
-
-[Giorgio Carbone](https://github.com/giocoal) - feel free to contact me!
-
-
-## License
-* >You can check out the full license [here](https://github.com/giocoal/CXR-ACGAN-chest-xray-generator-covid19-pneumonia/blob/main/README.md)
-
-This project is licensed under the terms of the **MIT** license.
-
-## Contributing
-
-1. Fork it (<https://github.com/giocoal/CXR-ACGAN-chest-xray-generator-covid19-pneumonia.git>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
-5. Create a new Pull Request
-
-
 # Contributors
 
-* [Giorgio Carbone](https://github.com/giocoal)
+* [Gianluca Cavallaro](https://github.com/Gianluca124)  
 * [Remo Marconzini](https://github.com/rmarconzini)
-* [Gianluca Cavallaro](https://github.com/Gianluca124)    
