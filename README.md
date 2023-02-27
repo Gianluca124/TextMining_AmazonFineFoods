@@ -7,6 +7,7 @@
 * [Pre-processing](#pre-processing)
 * [Classification](#classification)
 * [Clustering](#clustering)
+* [Results](#results)
 
 ## Abstract
 
@@ -48,6 +49,11 @@ In the `Classification.ipynb` notebook both binary and multi-class classificatio
 ## Clustering
 
 In the `Clustering.ipynb` notebook the clustering task is proposed via K-Means clustering and Agglomerative Clustering.
+
+
+## Results
+
+Check out the Google Drive folder with all the trained models and results: https://drive.google.com/drive/u/1/folders/1veNClNl7CxCTFHVNY2Fp29hcMoEj-the
 
 
 ## Status
