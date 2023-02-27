@@ -53,8 +53,7 @@ In the `Clustering.ipynb` notebook the clustering task is proposed via K-Means c
 
 ## Results
 
-Check out the Google Drive folder with all the trained models and results: https://drive.google.com/drive/u/1/folders/1veNClNl7CxCTFHVNY2Fp29hcMoEj-the
-
+Check out the [Google Drive folder](https://drive.google.com/drive/u/1/folders/1veNClNl7CxCTFHVNY2Fp29hcMoEj-the) with all the trained models and results.
 
 ## Status
 
